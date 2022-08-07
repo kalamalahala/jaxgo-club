@@ -100,4 +100,11 @@ class Jaxgo_Club_Public {
 
 	}
 
+	function jaxgo_club_shortcode() {
+		add_shortcode( 'jaxgo-club', array( $this, 'jaxgo_club_shortcode_callback' ) );
+	}
+
+	function jaxgo_club_shortcode_callback() {
+		return 'success';
+	}
 }
