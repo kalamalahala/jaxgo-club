@@ -105,6 +105,13 @@ class Jaxgo_Club_Public {
 	}
 
 	function jaxgo_club_shortcode_callback() {
-		return 'success';
+		global $post;
+		$post_array = var_dump($post);
+		$report = '<pre>';
+		$report .= '<h1>Jaxgo Club</h1>';
+		$report .= $post_array;
+		$report .= '</pre>';
+
+		return $report;
 	}
 }
