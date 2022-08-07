@@ -174,7 +174,7 @@ class Jaxgo_Club {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
 		// Public facing shortcodes
-		$this->loader->add_shortcode( 'jaxgo_club_shortcode', $plugin_public, 'jaxgo_club_shortcode' );
+		$this->loader->add_action( 'init', $plugin_public, 'jaxgo_club_shortcode' );
 
 	}
 
